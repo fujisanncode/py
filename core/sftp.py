@@ -4,10 +4,10 @@ import json
 
 def upload():
     # 本地json文件读取为字典格式
-    with open('../local/config.json', 'r') as config:
+    with open('../local/config.json', 'r', encoding='utf-8') as config:
         load = json.load(config)
     # 字典中读取变量
-    dev_ = load['dev2']
+    dev_ = load['dev']
     host = dev_['host']
     port = dev_['port']
     username = dev_['username']
